@@ -36,7 +36,7 @@ This PowerShell script is a comprehensive tool designed for system administrator
 
 ### 4. **Reset Active Directory User Password**
 - Facilitates password resets with two options:
-  1. Generate and assign a secure temporary password.
+  1. Generate and assign a secure temporary password. Users can specify the password length (minimum 8 characters).
   2. Set a custom password provided by the user.
 - Automatically unlocks accounts and forces password changes at the next logon.
 - Synchronizes the domain to ensure changes are reflected.
@@ -60,8 +60,16 @@ This PowerShell script is a comprehensive tool designed for system administrator
 - Identifies and lists all Active Directory accounts inactive for 90 days or more.
 - Exports the list to a `.csv` file for reporting or follow-up actions.
 
-### 9. **Exit Script**
-- Ensures session history is cleared before safely exiting.
+### 9. **Hash Check**
+- Allows users to compare file hashes using MD5, SHA1, and SHA256 algorithms.
+- Prompts the user to:
+  1. Specify the directory containing the files.
+  2. Select two files for comparison.
+- Clearly displays whether the hashes are identical or different for each algorithm.
+
+### **Exit Script**
+- Press **`q`** at any time to safely exit the script.
+- Ensures session history is cleared before exiting to maintain privacy.
 
 ---
 
@@ -83,11 +91,12 @@ This PowerShell script is a comprehensive tool designed for system administrator
 3. **Select a Task from the Menu**
    - After running the script, a menu will appear with numbered options.
    - Select an option by typing the corresponding number and pressing **Enter**.
+   - To exit the script, press **`q`**.
 
 4. **Follow the Prompts**
    - Depending on your selection, the script may ask for additional input:
      - For example, when deleting IIS logs, you will be asked to specify the retention period in days.
-     - When resetting a user's Active Directory password, you may choose between generating a temporary password or setting a custom one.
+     - When comparing file hashes, you will be prompted to choose two files for comparison.
 
 5. **Review Output**
    - The script provides detailed output for each action, including results or exported data.
@@ -95,11 +104,7 @@ This PowerShell script is a comprehensive tool designed for system administrator
 
 6. **Return to the Main Menu**
    - After completing a task, the script will return to the main menu for further selections.
-   - Type the number corresponding to **Exit** to end the session if no additional tasks are required.
-
-7. **Close PowerShell**
-   - Ensure you safely exit the script by selecting the **Exit** option from the menu.
-   - Clear your session history to maintain privacy if desired.
+   - Type **`q`** to end the session if no additional tasks are required.
 
 ---
 
